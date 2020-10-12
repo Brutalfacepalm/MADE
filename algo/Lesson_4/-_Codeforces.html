@@ -1,0 +1,889 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="ru">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="X-Csrf-Token" content="aa806a978281a83f33c195c62546ee11"/>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=0.01"/>
+
+    <script type="text/javascript" src="//sta.codeforces.com/s/11595/js/jquery-1.8.3.js"></script>
+    <script type="application/javascript">
+        window.standaloneContest = false;
+        function adjustViewport() {
+            var screenWidthPx = Math.min($(window).width(), window.screen.width);
+            var siteWidthPx = 1100; // min width of site
+            var ratio = Math.min(screenWidthPx / siteWidthPx, 1.0);
+            var viewport = "width=device-width, initial-scale=" + ratio;
+            $('#viewport').attr('content', viewport);
+            var style = $('<style>html * { max-height: 1000000px; }</style>');
+            $('html > head').append(style);
+        }
+
+        if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+            adjustViewport();
+        }
+
+        /* Protection against trailing dot in domain. */
+        let hostLength = window.location.host.length;
+        if (hostLength > 1 && window.location.host[hostLength - 1] === '.') {
+            window.location = window.location.protocol + "//" + window.location.host.substring(0, hostLength - 1);
+        }
+    </script>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta http-equiv="profileName" content="h1">
+    <meta name="google-site-verification" content="OTd2dN5x4nS4OPknPI9JFg36fKxjqY0i1PSfFPv_J90"/>
+    <meta property="fb:admins" content="100001352546622" />
+    <meta property="og:image" content="//sta.codeforces.com/s/11595/images/codeforces-telegram-square.png" />
+    <link rel="image_src" href="//sta.codeforces.com/s/11595/images/codeforces-telegram-square.png" />
+    <meta property="og:title" content="Задачи - Codeforces"/>
+    <meta property="og:description" content=""/>
+    
+    <meta property="og:site_name" content="Codeforces"/>
+    
+    
+    
+    
+    
+    
+    <meta name="utc_offset" content="+03:00"/>
+    <meta name="verify-reformal" content="f56f99fd7e087fb6ccb48ef2" />
+    <title>Задачи - Codeforces</title>
+        <meta name="description" content="Codeforces. Соревнования и олимпиады по информатике и программированию, сообщество программистов" />
+        <meta name="keywords" content="программирование информатика контест олимпиада алгоритмы c++ java графы vkcup" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="stylesheet" href="//sta.codeforces.com/s/11595/css/font-awesome.min.css" type="text/css" charset="utf-8" />
+
+        <link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Cuprum&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="//sta.codeforces.com/s/11595/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="//sta.codeforces.com/s/11595/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="//sta.codeforces.com/s/11595/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="//sta.codeforces.com/s/11595/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="//sta.codeforces.com/s/11595/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="//sta.codeforces.com/s/11595/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="//sta.codeforces.com/s/11595/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="//sta.codeforces.com/s/11595/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="//sta.codeforces.com/s/11595/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="//sta.codeforces.com/s/11595/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="//sta.codeforces.com/s/11595/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="//sta.codeforces.com/s/11595/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="//sta.codeforces.com/s/11595/favicon-16x16.png">
+    <link rel="manifest" href="//sta.codeforces.com/s/11595/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="//sta.codeforces.com/s/11595/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--CombineResourcesFilter-->
+    <link rel="stylesheet" href="//sta.codeforces.com/s/11595/css/prettify.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/11595/css/clear.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/11595/css/style.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/11595/css/ttypography.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/11595/css/problem-statement.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/11595/css/second-level-menu.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/11595/css/roundbox.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/11595/css/datatable.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/11595/css/table-form.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/11595/css/topic.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/11595/css/jquery.jgrowl.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/11595/css/facebox.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/11595/css/jquery.wysiwyg.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/11595/css/jquery.autocomplete.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/11595/css/codeforces.datepick.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/11595/css/colorbox.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/11595/css/jquery.drafts.css" type="text/css" charset="utf-8" />
+        <link rel="stylesheet" href="//sta.codeforces.com/s/11595/css/community.css" type="text/css" charset="utf-8" />
+        <link rel="stylesheet" href="//sta.codeforces.com/s/11595/css/groups.css" type="text/css" charset="utf-8" />
+        <link rel="stylesheet" href="//sta.codeforces.com/s/11595/css/sidebar-menu.css" type="text/css" charset="utf-8" />
+
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$$$','$$$']], displayMath: [['$$$$$$','$$$$$$']]}
+    });
+    MathJax.Hub.Register.StartupHook("End", function () {
+        Codeforces.runMathJaxListeners();
+    });
+    </script>
+    <script type="text/javascript" async
+            src="https://assets.codeforces.com/mathjax/MathJax.js?config=TeX-AMS_HTML-full"
+    >
+    </script>
+    <!-- /MathJax -->
+
+    <script type="text/javascript" src="//sta.codeforces.com/s/11595/js/prettify/prettify.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/11595/js/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/11595/js/pushstream.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/11595/js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/11595/js/jquery.lavalamp.min.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/11595/js/jquery.jgrowl.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/11595/js/jquery.swipe.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/11595/js/jquery.hotkeys.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/11595/js/facebox.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/11595/js/jquery.wysiwyg.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/11595/js/controls/wysiwyg.colorpicker.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/11595/js/controls/wysiwyg.table.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/11595/js/controls/wysiwyg.image.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/11595/js/controls/wysiwyg.link.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/11595/js/jquery.autocomplete.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/11595/js/ua-parser.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/11595/js/jquery.datepick.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/11595/js/jquery.ie6blocker.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/11595/js/jquery.colorbox-min.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/11595/js/jquery.ba-bbq.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/11595/js/jquery.drafts.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/11595/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/11595/js/autosize.min.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/11595/js/sjcl.js"></script>
+    <script type="text/javascript" src="/scripts/6ee5cccc25242cf6ac49b4481a6e79da/ru/codeforces-options.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/11595/js/codeforces.js?v=20160131"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/11595/js/EventCatcher.js?v=20160131"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/11595/js/preparedVerdictFormats-ru.js"></script>
+    <!--/CombineResourcesFilter-->
+
+    <link rel="stylesheet" href="//sta.codeforces.com/s/11595/markitup/skins/markitup/style.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/11595/markitup/sets/markdown/style.css" type="text/css" charset="utf-8" />
+
+
+    <script type="text/javascript" src="//sta.codeforces.com/s/11595/markitup/jquery.markitup.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/11595/markitup/sets/markdown/set.js"></script>
+
+    <!--[if IE]>
+    <style>
+        #sidebar {
+            padding-left: 1em;
+            margin: 1em 1em 1em 0;
+        }
+    </style>
+    <![endif]-->
+
+        <script type="text/javascript" src="//sta.codeforces.com/s/11595/js/jquery.datepick-ru.js"></script>
+
+
+</head>
+<body class=" "><span style='display:none;' class='csrf-token' data-csrf='aa806a978281a83f33c195c62546ee11'>&nbsp;</span>
+<!-- .notificationTextCleaner used in Codeforces.showAnnouncements() -->
+<div class="notificationTextCleaner" style="font-size: 0px"></div>
+<div class="button-up" style="display: none; opacity: 0.7; width: 50px; height:100%; position: fixed; left: 0; top: 0; cursor: pointer; text-align: center; line-height: 35px; color: #d3dbe4; font-weight: bold; font-size: 3.0rem;"><i class="icon-circle-arrow-up"></i></div>
+<div class="verdictPrototypeDiv" style="display: none;"></div>
+
+<!-- Codeforces JavaScripts. -->
+<script type="text/javascript">
+    String.prototype.hashCode = function() {
+        var hash = 0, i, chr;
+        if (this.length === 0) return hash;
+        for (i = 0; i < this.length; i++) {
+            chr   = this.charCodeAt(i);
+            hash  = ((hash << 5) - hash) + chr;
+            hash |= 0; // Convert to 32bit integer
+        }
+        return hash;
+    };
+
+    var queryMobile = Codeforces.queryString.mobile;
+    if (queryMobile === "true" || queryMobile === "false") {
+        Codeforces.putToStorage("useMobile", queryMobile == "true");
+    } else {
+        var useMobile = Codeforces.getFromStorage("useMobile");
+        if (useMobile === true || useMobile === false) {
+            if (useMobile != false) {
+                Codeforces.redirect(Codeforces.updateUrlParameter(document.location.href, "mobile", useMobile));
+            }
+        }
+    }
+</script>
+
+<script type="text/javascript">
+    if (window.parent.frames.length > 0) {
+        window.stop();
+    }
+</script>
+
+
+    <div id="vk_api_transport"></div>
+    <script type="text/javascript">
+        window.vkAsyncInit = function() {
+            VK.init({
+                apiId: 1961905
+            });
+            document.dispatchEvent(new Event("vkInitEvent"));
+        };
+
+        setTimeout(function() {
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "https://vk.com/js/api/openapi.js?167";
+            script.async = true;
+            document.getElementById("vk_api_transport").appendChild(script);
+        }, 0);
+    </script>
+
+<script type="text/javascript">
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '554666954583323',
+            xfbml      : true,
+            version    : 'v2.8'
+        });
+        FB.AppEvents.logPageView();
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+    (function () {
+        jQuery.expr[':'].containsCI = function(elem, index, match) {
+            return !match || !match.length || match.length < 4 || !match[3] || (
+                    elem.textContent || elem.innerText || jQuery(elem).text() || ''
+            ).toLowerCase().indexOf(match[3].toLowerCase()) >= 0;
+        }
+    }(jQuery));
+
+    $.ajaxPrefilter(function(options, originalOptions, xhr) {
+        var csrf = Codeforces.getCsrfToken();
+
+        if (csrf) {
+            var data = originalOptions.data;
+            if (originalOptions.data !== undefined) {
+                if (Object.prototype.toString.call(originalOptions.data) === '[object String]') {
+                    data = $.deparam(originalOptions.data);
+                }
+            } else {
+                data = {};
+            }
+            options.data = $.param($.extend(data, { csrf_token: csrf }));
+        }
+    });
+
+    window.getCodeforcesServerTime = function(callback) {
+        $.post("/data/time", {}, callback, "json");
+    }
+
+    window.updateTypography = function () {
+        $("div.ttypography code").addClass("tt");
+        $("div.ttypography pre>code").addClass("prettyprint").removeClass("tt");
+        $("div.ttypography table").addClass("bordertable");
+        prettyPrint();
+    }
+
+    $.ajaxSetup({ scriptCharset: "utf-8" ,contentType: "application/x-www-form-urlencoded; charset=UTF-8", headers: {
+        'X-Csrf-Token': Codeforces.getCsrfToken()
+    }});
+
+    window.updateTypography();
+
+    Codeforces.signForms();
+
+    setTimeout(function() {
+        $(".second-level-menu-list").lavaLamp({
+            fx: "backout",
+            speed: 700
+        });
+    }, 100);
+
+
+    Codeforces.countdown();
+    $("a[rel='photobox']").colorbox();
+
+        var count = 0;
+
+        function getDelay() {
+            var delay = 0;
+            var last = Codeforces.getFromStorage("LastOnlineTimeUpdaterMillis", 0);
+            if (last && last != null) {
+                var period = count < 20 ? 180 * 1000 : 360 * 1000;
+                delay = period - (new Date().getTime() - last);
+                if (delay < 0)
+                    delay = 0;
+            }
+            return delay;
+        }
+
+        window.setInterval(function () {
+            if (getDelay() <= 0 && count < 120) {
+                ++count;
+                Codeforces.ping("/data/update-online");
+            }
+        }, 5000);
+
+        var handle = "RoZa";
+        $("a.rated-user:contains(" + handle + "), span.participant:contains(" + handle + ")").each(function () {
+            if ($(this).text() == handle) {
+                var td = $(this).parent();
+                var tr = $(this).parent().parent();
+                if (td.is("td") && tr.is("tr")) {
+                    tr.addClass("highlighted-row");
+                }
+            }
+        });
+
+    function showAnnouncements(json) {
+        //info("j=" + JSON.stringify(json));
+
+        if (json.t != "a") {
+            return;
+        }
+
+        setTimeout(function() {
+            Codeforces.showAnnouncements(json.d, "ru");
+        }, Math.random() * 500);
+    }
+
+    function showEventCatcherUserMessage(json) {
+        if (json.t == "s") {
+            var points = json.d[5];
+            var passedTestCount = json.d[7];
+            var judgedTestCount = json.d[8];
+            var verdict = preparedVerdictFormats[json.d[12]];
+            var verdictPrototypeDiv = $(".verdictPrototypeDiv");
+            verdictPrototypeDiv.html(verdict);
+            if (judgedTestCount != null && judgedTestCount != undefined) {
+                verdictPrototypeDiv.find(".verdict-format-judged").text(judgedTestCount);
+            }
+            if (passedTestCount != null && passedTestCount != undefined) {
+                verdictPrototypeDiv.find(".verdict-format-passed").text(passedTestCount);
+            }
+            if (points != null && points != undefined) {
+                verdictPrototypeDiv.find(".verdict-format-points").text(points);
+            }
+            Codeforces.showMessage(verdictPrototypeDiv.text());
+        }
+    }
+
+    $(".clickable-title").each(function() {
+        var title = $(this).attr("data-title");
+        if (title) {
+            var tmp = document.createElement("DIV");
+            tmp.innerHTML = title;
+            $(this).attr("title", tmp.textContent || tmp.innerText || "");
+        }
+    });
+
+    $(".clickable-title").click(function() {
+        var title = $(this).attr("data-title");
+        if (title) {
+            Codeforces.alert(title);
+        } else {
+            Codeforces.alert($(this).attr("title"));
+        }
+    }).css("position", "relative").css("bottom", "3px");
+
+        Codeforces.showDelayedMessage();
+
+    Codeforces.reformatTimes();
+
+    //Codeforces.initializePubSub();
+    if (window.codeforcesOptions.subscribeServerUrl) {
+        window.eventCatcher = new EventCatcher(
+            window.codeforcesOptions.subscribeServerUrl,
+            [
+                Codeforces.getGlobalChannel(),
+                Codeforces.getUserChannel(),
+                Codeforces.getUserShowMessageChannel(),
+                Codeforces.getContestChannel(),
+                Codeforces.getParticipantChannel(),
+                Codeforces.getTalkChannel()
+            ]
+        );
+
+        if (Codeforces.getParticipantChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getParticipantChannel(), function(json) {
+                showAnnouncements(json);
+            });
+        }
+
+        if (Codeforces.getContestChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getContestChannel(), function(json) {
+                showAnnouncements(json);
+            });
+        }
+
+        if (Codeforces.getGlobalChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getGlobalChannel(), function(json) {
+                showAnnouncements(json);
+            });
+        }
+
+        if (Codeforces.getUserChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getUserChannel(), function(json) {
+                showAnnouncements(json);
+            });
+        }
+
+        if (Codeforces.getUserShowMessageChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getUserShowMessageChannel(), function(json) {
+                showEventCatcherUserMessage(json);
+            });
+        }
+    }
+
+    Codeforces.setupContestTimes("/group/zJTwakJcKM/data/contests");
+    Codeforces.setupSpoilers();
+    Codeforces.setupTutorials("/data/problemTutorial");
+        });
+    </script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-743380-5']);
+  _gaq.push(['_trackPageview']);
+
+  (function () {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = (document.location.protocol == 'https:' ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+<div id="body">
+<div style="width: 950px; margin: 0 auto;" class="compact-problemset">
+    <div id="header" style="position: relative;">
+        <div style="float:left;">
+                  <a href="/"><img src="//sta.codeforces.com/s/11595/images/codeforces-logo-with-telegram.png"/></a>
+        </div>
+        <div class="lang">
+            <div style="text-align: right;">
+                <a href="?locale=en"><img src="//sta.codeforces.com/s/11595/images/flags/24/gb.png" title="In English" alt="In English"/></a>
+                <a href="?locale=ru"><img src="//sta.codeforces.com/s/11595/images/flags/24/ru.png" title="По-русски" alt="По-русски"/></a>
+            </div>
+        </div>
+        <br style="clear: both;"/>
+    </div>
+
+    <div style="text-align: center; font-size: 1.8rem; margin-bottom: 0.5em;"
+         class="caption">4 - Базовые структуры данных</div>
+    <div style="border-top: 1px solid #ccc; height: 1em;"></div>
+
+    <div class="problem-frames">
+        <div
+                    style="margin-bottom: 2em;"
+        >
+
+    <style>
+        #facebox .content:has(.diff-popup) {
+            width: 90vw;
+            max-width: 120rem !important;
+        }
+
+        .diff-popup {
+            width: 90vw;
+            max-width: 120rem !important;
+            display: none;
+            overflow: auto;
+        }
+
+        .input-output-copier {
+            font-size: 1.2rem;
+            float: right;
+            color: #888 !important;
+            cursor: pointer;
+            border: 1px solid rgb(185, 185, 185);
+            padding: 3px;
+            margin: 1px;
+            line-height: 1.1rem;
+            text-transform: none;
+        }
+
+        .input-output-copier:hover {
+            background-color: #def;
+        }
+
+        .test-explanation textarea {
+            width: 100%;
+            height: 1.5em;
+        }
+
+        .pending-submission-message {
+            color: darkorange !important;
+        }
+    </style>
+    <script>
+        const OPENING_SPACE = String.fromCharCode(1001);
+        const CLOSING_SPACE = String.fromCharCode(1002);
+
+        const nodeToText = function (node, pre) {
+            let result = [];
+
+            if (node.tagName === "SCRIPT" || node.tagName === "math"
+                || (node.classList && node.classList.contains("input-output-copier")))
+                return [];
+
+            if (node.tagName === "NOBR") {
+                result.push(OPENING_SPACE);
+            }
+
+            if (node.nodeType === Node.TEXT_NODE) {
+                let s = node.textContent;
+                if (!pre) {
+                    s = s.replace(/\s+/g, " ");
+                }
+                if (s.length > 0) {
+                    result.push(s);
+                }
+            }
+
+            if (pre && node.tagName === "BR") {
+                result.push("\n");
+            }
+
+            node.childNodes.forEach(function (child) {
+                result.push(nodeToText(child, node.tagName === "PRE").join(""));
+            });
+
+            if (node.tagName === "DIV"
+                || node.tagName === "P"
+                || node.tagName === "PRE"
+                || node.tagName === "UL"
+                || node.tagName === "LI"
+            ) {
+                result.push("\n");
+            }
+
+            if (node.tagName === "NOBR") {
+                result.push(CLOSING_SPACE);
+            }
+
+            return result;
+        }
+
+        const isSpecial = function (c) {
+            return c === ',' || c === '.' || c === ';' || c === ')' || c === ' ';
+        }
+
+        const convertStatementToText = function(statmentNode) {
+            const text = nodeToText(statmentNode, false).join("").replace(/ +/g, " ").replace(/\n\n+/g, "\n\n");
+            let result = [];
+            for (let i = 0; i < text.length; i++) {
+                const c = text.charAt(i);
+                if (c === OPENING_SPACE) {
+                    if (!((i > 0 && text.charAt(i - 1) === '(') || (result.length > 0 && result[result.length - 1] === ' '))) {
+                        result.push('+');
+                    }
+                } else if (c === CLOSING_SPACE) {
+                    if (!(i + 1 < text.length && isSpecial(text.charAt(i + 1)))) {
+                        result.push('-');
+                    }
+                } else {
+                    result.push(c);
+                }
+            }
+            return result.join("").split("\n").map(value => value.trim()).join("\n");
+        };
+    </script>
+    <div class="diff-popup">
+    </div>
+
+<div class="problemindexholder" problemindex="A" data-uuid="ps_ff8fc756c843b705312af78a040181d687541914">
+    <div style="display: none; margin:1em 0;text-align: center; position: relative;" class="alert alert-info diff-notifier">
+        <div>The problem statement has recently been changed. <a class="view-changes" href="#">View the changes.</a></div>
+        <span class="diff-notifier-close" style="position: absolute; top: 0.2em; right: 0.3em; cursor: pointer; font-size: 1.4em;">&times;</span>
+    </div>
+        <div class="ttypography"><div class="problem-statement"><div class="header"><div class="title">A. Минимум на стеке</div><div class="time-limit"><div class="property-title">ограничение по времени на тест</div>2 секунды</div><div class="memory-limit"><div class="property-title">ограничение по памяти на тест</div>256 мегабайт</div><div class="input-file"><div class="property-title">ввод</div>стандартный ввод</div><div class="output-file"><div class="property-title">вывод</div>стандартный вывод</div></div><div><p>Вам требуется реализовать структуру данных, выполняющую следующие операции: </p><ol> <li> Добавить элемент $$$x$$$ в конец структуры. </li><li> Удалить последний элемент из структуры. </li><li> Выдать минимальный элемент в структуре. </li></ol></div><div class="input-specification"><div class="section-title">Входные данные</div><p>В первой строке входного файла задано одно целое число $$$n$$$ — количество операций ($$$1 \le n \le 10^6$$$). В следующих $$$n$$$ строках заданы сами операции. В $$$i$$$–ой строке число $$$t_i$$$ — тип операции (1, если операция добавления. 2, если операция удаления. 3, если операция минимума). Если задана операция добавления, то через пробел записано целое число $$$x$$$ — элемент, который следует добавить в структуру ($$$-10^9 \le x \le 10^9$$$). Гарантируется, что перед каждой операцией удаления или нахождения минимума структура не пуста.</p></div><div class="output-specification"><div class="section-title">Выходные данные</div><p>Для каждой операции нахождения минимума выведите одно число — минимальный элемент в структуре. Ответы разделяйте переводом строки.</p></div><div class="sample-tests"><div class="section-title">Пример</div><div class="sample-test"><div class="input"><div class="title">Входные данные</div><pre>8<br />1 2<br />1 3<br />1 -3<br />3<br />2<br />3<br />2<br />3<br /></pre></div><div class="output"><div class="title">Выходные данные</div><pre>-3<br />2<br />2<br /></pre></div></div></div></div><p>  </p></div>
+</div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        window.changedTests = new Set();
+        console.log("Initialized window.changedTests.");
+
+        function endsWith(string, suffix) {
+            return string.indexOf(suffix, string.length - suffix.length) !== -1;
+        }
+
+        var inputFileDiv = $("div.input-file");
+        var inputFile = inputFileDiv.text();
+        var outputFileDiv = $("div.output-file");
+        var outputFile = outputFileDiv.text();
+
+
+        if (!endsWith(inputFile, "стандартный ввод")
+            && !endsWith(inputFile, "standard input")) {
+            inputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        if (!endsWith(outputFile, "стандартный вывод")
+            && !endsWith(outputFile, "standard output")) {
+            outputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        var titleDiv = $("div.header div.title");
+
+
+
+        String.prototype.replaceAll = function (search, replace) {
+            return this.split(search).join(replace);
+        };
+
+        $(".sample-test .title").each(function () {
+            var preId = ("id" + Math.random()).replaceAll(".", "0");
+            var cpyId = ("id" + Math.random()).replaceAll(".", "0");
+
+            $(this).parent().find("pre").attr("id", preId);
+            var $copy = $("<div title='Скопировать' data-clipboard-target='#" + preId + "' id='" + cpyId + "' class='input-output-copier'>Скопировать</div>");
+            $(this).append($copy);
+
+            var clipboard = new Clipboard('#' + cpyId, {
+                text: function (trigger) {
+                    return Codeforces.filterClipboardText(document.querySelector('#' + preId).innerText);
+                }
+            });
+
+            var isInput = $(this).parent().hasClass("input");
+
+            clipboard.on('success', function (e) {
+                if (isInput) {
+                    Codeforces.showMessage("Входные данные были скопированы в буфер обмена");
+                } else {
+                    Codeforces.showMessage("Выходные данные были скопированы в буфер обмена");
+                }
+                e.clearSelection();
+            });
+        });
+
+        $(".test-form-item input").change(function () {
+            addPendingSubmissionMessage($($(this).closest("form")), "Вы изменили ответ, не забудьте его отправить, если вы хотите сохранить изменения");
+            var index = $(this).closest(".problemindexholder").attr("problemindex");
+            var test = "";
+            $(this).closest("form input").each(function () {
+                var test_ = $(this).attr("name");
+                if (test_ && test_.substring(0, 4) === "test") {
+                    test = test_;
+                }
+            });
+            if (index.length > 0 && test.length > 0) {
+                var indexTest = index + "::" + test;
+                window.changedTests.add(indexTest);
+            }
+        });
+
+        $(window).on('beforeunload', function () {
+            if (window.changedTests.size > 0) {
+                return 'Dialog text here';
+            }
+        });
+
+        autosize($('.test-explanation textarea'));
+
+    });
+</script>
+        </div>
+        <div
+                    style="margin-bottom: 2em;"
+        >
+
+
+<div class="problemindexholder" problemindex="B" data-uuid="ps_2110f3c5e72da67d06d2080d40b0a3f8bd11d68d">
+    <div style="display: none; margin:1em 0;text-align: center; position: relative;" class="alert alert-info diff-notifier">
+        <div>The problem statement has recently been changed. <a class="view-changes" href="#">View the changes.</a></div>
+        <span class="diff-notifier-close" style="position: absolute; top: 0.2em; right: 0.3em; cursor: pointer; font-size: 1.4em;">&times;</span>
+    </div>
+        <div class="ttypography"><div class="problem-statement"><div class="header"><div class="title">B. Постфиксная запись</div><div class="time-limit"><div class="property-title">ограничение по времени на тест</div>1 секунда</div><div class="memory-limit"><div class="property-title">ограничение по памяти на тест</div>256 мегабайт</div><div class="input-file"><div class="property-title">ввод</div>стандартный ввод</div><div class="output-file"><div class="property-title">вывод</div>стандартный вывод</div></div><div><p>В постфиксной записи (или обратной польской записи) операция записывается после двух операндов. Например, сумма двух чисел <span class="tex-font-style-tt">A</span> и <span class="tex-font-style-tt">B</span> записывается как <span class="tex-font-style-tt">A B +</span>. Запись <span class="tex-font-style-tt">B C + D *</span> обозначает привычное нам <span class="tex-font-style-tt">(B + C) * D</span>, а запись <span class="tex-font-style-tt">A B C + D * +</span> означает <span class="tex-font-style-tt">A + (B + C) * D</span>. Достоинство постфиксной записи в том, что она не требует скобок и дополнительных соглашений о приоритете операторов для своего чтения.</p><p>Дано выражение в обратной польской записи. Определите его значение.</p></div><div class="input-specification"><div class="section-title">Входные данные</div><p>В единственной строке записано выражение в постфиксной записи, содержащее однозначные числа и операции <span class="tex-font-style-tt">+</span>, <span class="tex-font-style-tt">-</span>, <span class="tex-font-style-tt">*</span>. Строка содержит не более 100 чисел и операций.</p></div><div class="output-specification"><div class="section-title">Выходные данные</div><p>Необходимо вывести значение записанного выражения. Гарантируется, что результат выражения, а также результаты всех промежуточных вычислений по модулю меньше <span class="tex-span">2<sup class="upper-index">31</sup></span>.</p></div><div class="sample-tests"><div class="section-title">Пример</div><div class="sample-test"><div class="input"><div class="title">Входные данные</div><pre>8 9 + 1 7 - *<br /></pre></div><div class="output"><div class="title">Выходные данные</div><pre>-102<br /></pre></div></div></div></div><p>  </p></div>
+</div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        function endsWith(string, suffix) {
+            return string.indexOf(suffix, string.length - suffix.length) !== -1;
+        }
+
+        var inputFileDiv = $("div.input-file");
+        var inputFile = inputFileDiv.text();
+        var outputFileDiv = $("div.output-file");
+        var outputFile = outputFileDiv.text();
+
+
+        if (!endsWith(inputFile, "стандартный ввод")
+            && !endsWith(inputFile, "standard input")) {
+            inputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        if (!endsWith(outputFile, "стандартный вывод")
+            && !endsWith(outputFile, "standard output")) {
+            outputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        var titleDiv = $("div.header div.title");
+
+
+
+
+    });
+</script>
+        </div>
+        <div
+                    style="margin-bottom: 2em;"
+        >
+
+
+<div class="problemindexholder" problemindex="C" data-uuid="ps_ca525d5f85935927b3c91aec3ada390e27729f31">
+    <div style="display: none; margin:1em 0;text-align: center; position: relative;" class="alert alert-info diff-notifier">
+        <div>The problem statement has recently been changed. <a class="view-changes" href="#">View the changes.</a></div>
+        <span class="diff-notifier-close" style="position: absolute; top: 0.2em; right: 0.3em; cursor: pointer; font-size: 1.4em;">&times;</span>
+    </div>
+        <div class="ttypography"><div class="problem-statement"><div class="header"><div class="title">C. Реализуйте очередь</div><div class="time-limit"><div class="property-title">ограничение по времени на тест</div>2 секунды</div><div class="memory-limit"><div class="property-title">ограничение по памяти на тест</div>256 мегабайт</div><div class="input-file"><div class="property-title">ввод</div>стандартный ввод</div><div class="output-file"><div class="property-title">вывод</div>стандартный вывод</div></div><div><p>Для каждой операции изъятия элемента выведите ее результат.</p><p>На вход программе подаются строки, содержащие команды. Каждая строка содержит одну команду. Команда — это либо &quot;<span class="tex-font-style-tt">+ N</span>&quot;, либо &quot;<span class="tex-font-style-tt">-</span>&quot;. Команда &quot;<span class="tex-font-style-tt">+ N</span>&quot; означает добавление в очередь числа $$$N$$$, по модулю не превышающего $$$10^9$$$. Команда &quot;<span class="tex-font-style-tt">-</span>&quot; означает изъятие элемента из очереди.</p></div><div class="input-specification"><div class="section-title">Входные данные</div><p>В первой строке содержится количество команд — $$$m$$$ ($$$1 \leqslant m \leqslant 10^5$$$). В последующих строках содержатся команды, по одной в каждой строке.</p></div><div class="output-specification"><div class="section-title">Выходные данные</div><p>Выведите числа, которые удаляются из очереди, по одному в каждой строке. Гарантируется, что изъятий из пустой очереди не производится.</p></div><div class="sample-tests"><div class="section-title">Пример</div><div class="sample-test"><div class="input"><div class="title">Входные данные</div><pre>4<br />+ 1<br />+ 10<br />-<br />-<br /></pre></div><div class="output"><div class="title">Выходные данные</div><pre>1<br />10<br /></pre></div></div></div></div><p>  </p></div>
+</div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        function endsWith(string, suffix) {
+            return string.indexOf(suffix, string.length - suffix.length) !== -1;
+        }
+
+        var inputFileDiv = $("div.input-file");
+        var inputFile = inputFileDiv.text();
+        var outputFileDiv = $("div.output-file");
+        var outputFile = outputFileDiv.text();
+
+
+        if (!endsWith(inputFile, "стандартный ввод")
+            && !endsWith(inputFile, "standard input")) {
+            inputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        if (!endsWith(outputFile, "стандартный вывод")
+            && !endsWith(outputFile, "standard output")) {
+            outputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        var titleDiv = $("div.header div.title");
+
+
+
+
+    });
+</script>
+        </div>
+        <div
+                    style="margin-bottom: 1em;"
+        >
+
+
+<div class="problemindexholder" problemindex="D" data-uuid="ps_7211409445200ca54e6154b4093ca9e8076c28c3">
+    <div style="display: none; margin:1em 0;text-align: center; position: relative;" class="alert alert-info diff-notifier">
+        <div>The problem statement has recently been changed. <a class="view-changes" href="#">View the changes.</a></div>
+        <span class="diff-notifier-close" style="position: absolute; top: 0.2em; right: 0.3em; cursor: pointer; font-size: 1.4em;">&times;</span>
+    </div>
+        <div class="ttypography"><div class="problem-statement"><div class="header"><div class="title">D. Приоритетная очередь – 2</div><div class="time-limit"><div class="property-title">ограничение по времени на тест</div>3 секунды</div><div class="memory-limit"><div class="property-title">ограничение по памяти на тест</div>256 мегабайт</div><div class="input-file"><div class="property-title">ввод</div>стандартный ввод</div><div class="output-file"><div class="property-title">вывод</div>стандартный вывод</div></div><div><p>Реализуйте приоритетную очередь. Ваша очередь должна поддерживать следующие операции: добавить элемент, извлечь минимальный элемент, уменьшить элемент, добавленный во время одной из операций.</p><p>Если какой-нибудь <span class="tex-font-style-tt">decrease-key</span> уменьшает уже удаленный элемент, то ничего делать не нужно.</p><p>Все операции нумеруются по порядку, начиная с 1.</p></div><div class="input-specification"><div class="section-title">Входные данные</div><p>Содержится описание операций со очередью. В очередь помещаются и извлекаются только целые числа, не превышающие $$$10^9$$$ по абсолютной величине.</p><p>Гарантируется, что для любого <span class="tex-font-style-tt">decrease-key x v</span> из входных данных операция под номером $$$x$$$ является <span class="tex-font-style-tt">push</span>.</p></div><div class="output-specification"><div class="section-title">Выходные данные</div><p>Выведите последовательно результат выполнения всех операций <span class="tex-font-style-tt">extract-min</span> из двух целых чисел: значение элемента и номер операции <span class="tex-font-style-tt">push</span>, при котором этот элемент был добавлен. Если в очереди есть несколько минимальных элементов, выведите любой. Если перед очередной операцией <span class="tex-font-style-tt">extract-min</span> очередь пуста, выведите звездочку.</p></div><div class="sample-tests"><div class="section-title">Пример</div><div class="sample-test"><div class="input"><div class="title">Входные данные</div><pre>
+push 3
+push 4
+push 2
+extract-min
+decrease-key 2 1
+extract-min
+extract-min
+extract-min
+</pre></div><div class="output"><div class="title">Выходные данные</div><pre>
+2 3
+1 2
+3 1
+*
+</pre></div></div></div></div><p>  </p></div>
+</div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        function endsWith(string, suffix) {
+            return string.indexOf(suffix, string.length - suffix.length) !== -1;
+        }
+
+        var inputFileDiv = $("div.input-file");
+        var inputFile = inputFileDiv.text();
+        var outputFileDiv = $("div.output-file");
+        var outputFile = outputFileDiv.text();
+
+
+        if (!endsWith(inputFile, "стандартный ввод")
+            && !endsWith(inputFile, "standard input")) {
+            inputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        if (!endsWith(outputFile, "стандартный вывод")
+            && !endsWith(outputFile, "standard output")) {
+            outputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        var titleDiv = $("div.header div.title");
+
+
+
+
+    });
+</script>
+        </div>
+    </div>
+
+    <br style="clear: both;"/>
+
+    <div id="footer">
+        <div><a href="https://codeforces.com/">Codeforces</a> (c) Copyright 2010-2020 Михаил Мирзаянов</div>
+        <div>Соревнования по программированию 2.0</div>
+
+    </div>
+
+</div>
+</div>
+    <script type="application/javascript">
+        if ('serviceWorker' in navigator && 'fetch' in window && 'caches' in window) {
+            var parser = new UAParser();
+            var browserName = parser.getBrowser().name;
+            var browserVersion = parser.getBrowser().version;
+
+            var supportedBrowser = false;
+            var supportedBrowsers = {
+                "Chrome": "76",
+                "Firefox": "68",
+                // "Edge": "18",
+                "Safari": "12.1",
+                "Opera": "63",
+                "Yandex": "19.9"
+            };
+
+            for (var name in supportedBrowsers) {
+                if (name === browserName && supportedBrowsers[name] <= browserVersion) {
+                    supportedBrowser = true;
+                }
+            }
+
+            if (supportedBrowser) {
+                navigator.serviceWorker.register('/service-worker-11595.js')
+                    .then(function (registration) {
+                        console.log('Service worker registered');
+                    })
+                    .catch(function (error) {
+                        console.log('Registration failed: ', error);
+                    });
+            } else {
+                navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                    for (var i = 0; i < registrations.length; i++) {
+                        registrations[i].unregister();
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>
