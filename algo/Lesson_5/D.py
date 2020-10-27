@@ -19,7 +19,7 @@ class NodeKey:
         hash_key = self.__h(value)
         if self.body[hash_key]:
             if value in self.body[hash_key]:
-                return
+                returnо
         self.body[hash_key].append(value)
 
     def delete(self, value):
