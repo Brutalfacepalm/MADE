@@ -109,8 +109,14 @@ class MultiMap:
 mm = MultiMap()
 
 for cmd in stdin.buffer.read().splitlines():
-    cmd = cmd.decode(UNICODE).split()
+    cmd = cmd.decode(UNICODE)
+    if len(cmd) == 1:
+        n = int(cmd)
+    elif len(cmd) == n:
+        cmd = cmd.split()
+        a = list(map(int, cmd))
 
+    cmd = cmd.split()
     if len(cmd) > 0:
         k = cmd[1]
         command = cmd[0]
