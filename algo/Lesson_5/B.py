@@ -44,7 +44,8 @@ class MapChain:
         return (h % self.P) % self.M
 
     def __search_keys(self, hash_key, key):
-        index_by_hash_key = [index for index, key_and_value in enumerate(self.body[hash_key]) if key_and_value[0] == key]
+        index_by_hash_key = [index for index, key_and_value in enumerate(self.body[hash_key]) if
+                             key_and_value[0] == key]
         if len(index_by_hash_key) > 0:
             return index_by_hash_key[0]
         return None

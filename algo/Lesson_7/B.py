@@ -30,7 +30,6 @@ def search_min(u, v, s_m):
         return [u, v, min_l_r]
 
     k_pow = _k_pow[r - l]
-
     l_r = r - pows_2[k_pow]
 
     min_l = s_m[l - 1][k_pow]
@@ -46,7 +45,6 @@ if n > 1:
 
     _k_pow = [int(math.trunc(math.log2(i))) for i in range(1, n + 1)]
     pows_2 = [2 ** i for i in list(set(_k_pow))]
-
     sparse_matrix = [[math.inf for _ in range(MAX_K_POW)] for _ in range(n)]
 
 
@@ -72,14 +70,10 @@ if n > 1:
                 sparse_matrix[i][k] = min_
 
     u_v_r = search_min(u0, v0, sparse_matrix)
-
     for i in range(1, m):
         u = mod(K_u * u_v_r[0] + B_u + u_v_r[2] + 2 * i, n) + 1
         v = mod(K_v * u_v_r[1] + B_v + u_v_r[2] + 5 * i, n) + 1
         u_v_r = search_min(u, v, sparse_matrix)
-
     print(' '.join(map(str, u_v_r)))
 else:
-    # sparse_matrix = [[a1]]
     print(' '.join(map(str, [u0, v0, a1])))
-

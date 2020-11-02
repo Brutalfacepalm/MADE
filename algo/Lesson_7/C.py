@@ -3,19 +3,24 @@ from sys import stdin, stdout
 SEPARATOR = "\n"
 UNICODE = "utf-8"
 
-# n = int(input())
-# a = list(map(int, input().split()))
-
 
 class Fenwick:
-
-    def _get_body(self, n, a):
+    def get_body(self, n, a):
         self.n = n
         self.body = a
-        self.t = [0 for _ in range(self.n)]
+        self.t = [0 for _ in a]
+        for i, v in enumerate(self.body):
+            self.t[i] = self._t_i(self._f_i(i), i, self.body)
 
     def _f_i(self, i):
         return i & (i + 1)
+
+    def _t_i(self, fi, i, a):
+        r = 0
+        while fi <= i:
+            r += a[fi]
+            fi += 1
+        return r
 
     def _mod(self, i, x):
         while i < self.n:
@@ -33,7 +38,7 @@ class Fenwick:
             r_j += self.t[j]
             j = self._f_i(j) - 1
 
-        r_i = 0
+        r_i = - self.body[i]
         while i >= 0:
             r_i += self.t[i]
             i = self._f_i(i) - 1
@@ -43,27 +48,27 @@ class Fenwick:
 
 rsq = Fenwick()
 
-for cmd in stdin.buffer.read().splitlines():
-    cmd = cmd.decode(UNICODE).split()
-    print(cmd)
-
-    if len(cmd) == 1:
-        n = int(cmd[0])
-    elif len(cmd) == n:
-        a = list(map(int, cmd))
-        rsq._get_body(n, a)
-
-
-    elif len(cmd) == 3 and cmd[0] in ['set', 'sum']:
-        print(cmd)
-        i = cmd[1]
-        x = cmd[2]
-        command = cmd[0]
-        if command == 'set':
-            rsq.set(i, x)
-        if command == 'sum':
-            j = x
-            print(rsq.summ(i, j))
-            stdout.buffer.write((str(rsq.summ(i, j)) + SEPARATOR).encode(UNICODE))
+inputs = []
+for cmd in stdin.buffer:
+    cmd = cmd.strip().decode(UNICODE).split()
+    if cmd:
+        inputs.append(cmd)
     else:
         break
+
+for inpt, cmd in enumerate(inputs):
+    if inpt == 0:
+        n = int(cmd[0])
+    elif inpt == 1:
+        a = list(map(int, cmd))
+        rsq.get_body(n, a)
+    else:
+        i = int(cmd[1])
+        x = int(cmd[2])
+        command = cmd[0]
+        if command == 'set':
+            rsq.set(i - 1, x)
+        if command == 'sum':
+            j = x
+            r = rsq.summ(i - 1, j - 1)
+            stdout.buffer.write((str(r) + SEPARATOR).encode(UNICODE))
